@@ -823,7 +823,7 @@ body {
   text-decoration: none;
   color: #c0c0c0;
   -webkit-transition: color .2s ease-in-out;
-  transition: color .2s ease-in-out
+  transition: color .2s ease-in-out;
 }
 
 .intro--options>a:hover {
@@ -880,11 +880,51 @@ body {
 }
 
 
+@media (max-width: 600px) {
+  .intro--banner img{
+    width: 630px;
+  }
+  .hcolor {
+    color: white;
+    margin-left: 131px;
+  }
+}
+
+@media (max-width: 670px) {
+  .intro--banner img{
+    width: 630px;
+  }
+  .hcolor {
+    color: white;
+    margin-left: 230px;
+  }
+}
+
+@media (max-width: 749px) {
+  .intro--banner img{
+    width: 630px;
+  }
+  .hcolor {
+    color: white;
+    margin-left: 240px;
+  }
+}
+
+
+@media (max-width: 767px) {
+  .intro--banner img {
+    display: none
+  }
+}
 
 
 @media (max-width: 767px) {
   .intro--banner {
     height: 305px
+  }
+  .hcolor {
+    color: white;
+    margin-left: 240px;
   }
 
   .intro--banner h1 {
@@ -892,7 +932,7 @@ body {
   }
 
   .intro--banner img {
-    width: 330px
+    width: 630px
   }
 
   .intro--options {
@@ -1184,6 +1224,10 @@ body {
     color:white;
     margin-left: 200px;
   }
+  .hcolorcontac{
+    color:white;
+    margin-left: 0px;
+  }
 }
 @media (min-width: 900px) {
   .about {
@@ -1193,6 +1237,10 @@ body {
     color:white;
     margin-left: 200px;
   }
+  .hcolorcontac{
+    color:white;
+    margin-left: 0px;
+  }
 }
 
 
@@ -1204,6 +1252,10 @@ body {
     color:white;
     margin-left: 200px;
   }
+  .hcolorcontac{
+    color:white;
+    margin-left: 0px;
+  }
 }
 @media (min-width: 1280px) {
   .about {
@@ -1212,6 +1264,10 @@ body {
   .hcolor{
     color:white;
     margin-left: 200px;
+  }
+  .hcolorcontac{
+    color:white;
+    margin-left: 0px;
   }
 }
 
@@ -1403,7 +1459,11 @@ body {
   }
   .hcolor{
     margin-left: 55px;
-
+  }
+  .hcolorcontac{
+    color: white;
+    margin-left: 0px;
+    
   }
 
   .contactinfo {
@@ -1449,7 +1509,7 @@ body {
   left: 0;
   width: 100%;
   height: 100%;
-//  background-image: url("../img/contact-visual.jpg");
+  /*background-image: url("../img/contact-visual.jpg");*/
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -1480,9 +1540,30 @@ body {
   color: white;
 }
 
+
+@media (max-width: 1920px) {
+  .contactinfo{
+    font-size: 200% !important;
+    color: white;
+  }
+}
+
+@media (max-width: 1310px) {
+  .contactinfo{
+    font-size: 150% !important;
+    color: white;
+  }
+}
+
+
+
 @media (max-width: 1180px) {
   .contact--lockup {
     max-width: 90%
+  }
+  .contactinfo{
+    font-size: 100% !important;
+    color: white;
   }
 }
 
@@ -2004,7 +2085,55 @@ body {
   background: linear-gradient(to right,#f54ea2 0,#ff7676 100%);
 }
 
+/*start
+*/
+.intro--options a {
+  position: relative;
+  text-decoration: none;
+}
 
+.intro--options a:hover .hover-window {
+  opacity: 1;
+  visibility: visible;
+}
+
+.hover-trigger {
+  /*color: #007BFF;*/
+  text-decoration: underline;
+
+}
+
+.hover-window {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 200px;
+  max-width: 400px;
+  padding: 15px;
+  background: linear-gradient(45deg,#c31432, #240b36);
+  font-size: 14px;
+  line-height: 1.6;
+  font-family: "Montserrat", sans-serif;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  z-index: 1;
+}
+
+
+
+.hcolorcontac {
+  color:white;
+}
+
+
+
+
+/*end
+/*/
 
 /*preloader ZONE*/
 

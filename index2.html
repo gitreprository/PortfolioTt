@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Description Window</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        .hover-container {
+            position: relative;
+            display: inline-block;
+        }
+
+        .hover-trigger {
+            color: #007BFF;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+
+        .hover-window {
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            min-width: 200px;
+            max-width: 400px;
+            padding: 15px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            opacity: 0;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+            z-index: 1;
+        }
+
+        .hover-container:hover .hover-window {
+            opacity: 1;
+            visibility: visible;
+        }
+    </style>
+</head>
+<body>
+
+<div class="hover-container">
+    <p class="hover-trigger">Наведіть курсор, щоб побачити опис</p>
+    <div class="hover-window">
+        <p>Це адаптивне вікно з описом, яке випливає при наведенні на певний текст. Ви можете вставити сюди свій власний текст та вміст.</p>
+    </div>
+</div>
+
+</body>
+</html>
